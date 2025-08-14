@@ -21,7 +21,7 @@ spec:
               memory: 32Mi
           ports:
             - containerPort: 80
-          image: harbor.kigawa.net/private/renlin:master-15
+          image: harbor.kigawa.net/library/renlin-site:main-2266d440c548940430fea59876784e2e5875e3d8
           volumeMounts: []
           env: []
       volumes: []
