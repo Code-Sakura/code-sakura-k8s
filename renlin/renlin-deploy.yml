@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: renlin-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: renlin-deploy
+  template:
+    metadata:
+      labels:
+        app: renlin-deploy
+    spec:
+      containers:
+        - name: renlin
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              memory: 32Mi
+          ports:
+            - containerPort: 80
+          image: harbor.kigawa.net/private/renlin:master-15
+          volumeMounts: []
+          env: []
+      volumes: []

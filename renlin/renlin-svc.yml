@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: renlin-svc
+spec:
+  selector:
+    app: renlin-deploy
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      name: "http"
+  type: ClusterIP
+
